@@ -13,7 +13,9 @@ h2 {
   text-align: center;
   width: 500px;
   z-index: 100;
-  background: linear-gradient(90deg, #63ec96, #36d1dc);
+  background: linear-gradient(120deg, #63ec96, #36d1dc, #d400ff, #e2c171, #63ec96);
+  background-size: 500% 500%;
+  animation: wavesgradient 4s linear infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -236,6 +238,16 @@ li {
 
   100% {
     text-shadow: 0 0 55px #1900ff, 0 0 55px #d400ff;
+  }
+}
+
+@keyframes wavesgradient {
+  0% {
+    background-position: 100% 100%;
+  }
+
+  100% {
+    background-position: 0 0;
   }
 }
 

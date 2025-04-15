@@ -28,7 +28,8 @@ function App() {
       "Sokeri": [300, 350],
       "Fariinisokeri": [300, 350],
       "Sitruunat": 2,
-      "Hiiva": "1/5 tl"
+      "Hiiva": 0.2, // 1/5tl
+      "Hiivaml": 2 // 2ml
     };
 
     const updateRecipeUI = () => {
@@ -40,14 +41,15 @@ function App() {
       const brownMin = Math.round(baseRecipe["Fariinisokeri"][0] * factor);
       const brownMax = Math.round(baseRecipe["Fariinisokeri"][1] * factor);
       const lemons = Math.ceil(baseRecipe["Sitruunat"] * factor);
-      const hiiva = baseRecipe["Hiiva"];
+      const hiivaml = Math.round(baseRecipe["Hiivaml"] * factor);
+      //const hiiva = (baseRecipe["Hiiva"] * factor).toFixed(2) + " tl";
 
       const items = [
         `Vettä: ${amountInput.value} litraa`,
         `Sokeria: ${sugarMin}–${sugarMax} g`,
         `Fariinisokeria: ${brownMin}–${brownMax} g`,
         `Sitruunoita: ${lemons} kpl`,
-        `Hiivaa: ${hiiva}`
+        `Hiivaa: ${hiivaml} ml`
       ];
 
       for (let item of items) {
@@ -56,6 +58,7 @@ function App() {
         li.textContent = item;
         recipeList.appendChild(li);
       }
+      const nokare = hiivaml > 2 ? "" : " (herneen kokoinen nokare)";
 
       todoView.innerHTML = `
         <h5 class="mt-2">Ohje:</h5>
@@ -64,7 +67,7 @@ function App() {
             <li class="list-group-item">Sekoita kunnes sokeri sulaa.</li>
             <li class="list-group-item">Lisää ${lemons} sitruunan mehu ja viipaleet.</li>
             <li class="list-group-item">Jäähdytä kädenlämpöiseksi. (+38~)</li>
-            <li class="list-group-item">Lisää hiiva (${hiiva}). (herneen kokoinen nokare)</li>
+            <li class="list-group-item">Lisää hiiva ${hiivaml} ml. ${nokare}</li>
             <li class="list-group-item">Peitä ja anna käydä huoneenlämmössä 1 vrk.</li>
             <li class="list-group-item">Pullota, lisää 1tl sokeria ja muutama rusina per pullo. Säilytä viileässä 3–5 päivää.</li>
         </ol>
