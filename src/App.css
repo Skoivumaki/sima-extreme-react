@@ -1,0 +1,391 @@
+h2 {
+  text-align: center;
+  margin: 50px
+}
+
+.dancingtext h3 {
+  font-size: 6rem !important;
+  font-weight: 900;
+  font-family: OCR A Std, monospace;
+  margin: 0.5em auto 0.5em;
+  color: #63ec96;
+  position: relative;
+  text-align: center;
+  width: 500px;
+  z-index: 100;
+  background: linear-gradient(90deg, #63ec96, #36d1dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.signal.active label {
+  animation: waves 143.307s 0.0s linear forwards;
+}
+
+.signal.active .dancingtext {
+  animation: kick 0.9022s 0.256s ease-in-out infinite,
+    waves 286.615s 0.0s linear infinite,
+    bells 0.4511s 7.4s linear infinite,
+    synth 0.1503666666666667s linear infinite;
+}
+
+.position-absolute {
+  display: block;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-tabs .nav-link {
+  background-color: #030126;
+  border-color: #d5066a;
+  color: #63ec96;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #63ec96;
+  border-color: #d5066a;
+  color: #030126;
+}
+
+.bg-light {
+  background-color: #02000a !important;
+}
+
+.list-group {
+  --bs-list-group-border-color: #d5066a;
+  --bs-list-group-action-active-bg: #63ec96 !important;
+  --bs-list-group-active-color: #63ec96;
+  --bs-list-group-active-bg: #0d6efd;
+  --bs-list-group-active-border-color: #0d6efd;
+}
+
+.list-group-item {
+  position: relative;
+  display: block;
+  color: #e2c171;
+  text-decoration: none;
+  background-color: #030126;
+}
+
+.nav-tabs {
+  --bs-nav-tabs-border-color: #63ec96;
+  --bs-nav-tabs-link-hover-border-color: #63ec96 #63ec96 #63ec96;
+  --bs-nav-tabs-link-active-color: #d5066a;
+  --bs-nav-tabs-link-active-bg: #d5066a;
+  border-bottom: var(--bs-nav-tabs-border-width) solid #d5066a;
+}
+
+.border {
+  border: var(--bs-border-width) var(--bs-border-style) #d5066a !important;
+}
+
+.form-label {
+  color: #63ec96;
+}
+
+.btn-secondary {
+  --bs-btn-color: #63ec96;
+  --bs-btn-bg: #02000a;
+  --bs-btn-border-color: #d5066a;
+  --bs-btn-hover-color: #d5066a;
+  --bs-btn-hover-bg: #63ec96;
+  --bs-btn-hover-border-color: #d5066a;
+}
+
+.form-control {
+  color: #d5066a;
+  background-color: #030126;
+  border: var(--bs-border-width) solid #63ec96;
+  border-radius: var(--bs-border-radius);
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+h5 {
+  text-align: left;
+  color: #63ec96;
+}
+
+@media (max-width: 719px) {
+  .container {
+    max-width: 1080px;
+    width: 100vw !important;
+    overflow-y: auto;
+    height: 80vh !important;
+    overflow-y: auto;
+    padding-bottom: 5vh;
+  }
+
+  .dancingtext h3 {
+    font-size: 5rem !important;
+    font-weight: 900;
+    font-family: OCR A Std, monospace;
+    margin: 0.5em auto 0.5em;
+    position: relative;
+    text-align: center;
+    width: 500px;
+    z-index: 100;
+  }
+}
+
+.container {
+  max-width: 1080px;
+  overflow-y: auto;
+  height: 65vh !important;
+}
+
+/* highlight: 63ec96 
+  background: 030126 
+  highlight2: d5066a
+  ambient: e2c171
+  background2: 02000a
+*/
+
+.startbtn {
+  position: relative;
+  display: block;
+  z-index: 100;
+  pointer-events: auto;
+}
+
+.dancingcontainer {
+  z-index: 100;
+}
+
+
+
+.signal {
+  font-size: 1.8em;
+  height: 100vh;
+  position: absolute;
+  text-align: center;
+  width: 100vw;
+  background-color: rgb(0, 0, 0);
+  z-index: -98;
+  top: 0%;
+  left: 0px;
+}
+
+li {
+  text-align: left;
+  font-size: medium;
+}
+
+@keyframes synth {
+  0.0% {
+    color: rgb(255, 255, 255);
+  }
+
+  100.0% {
+    color: rgb(209, 0, 164);
+  }
+}
+
+@keyframes kick {
+  100.0% {
+    transform: scaleX(1) scaleY(1);
+  }
+
+  52.5% {
+    transform: scaleX(1) scaleY(1);
+  }
+
+  50% {
+    transform: scaleX(1) scaleY(1);
+  }
+
+  20% {
+    transform: scaleX(1.05) scaleY(1.05);
+  }
+
+  0.0% {
+    transform: scaleX(0.9) scaleY(0.9);
+  }
+}
+
+@keyframes bells {
+  0.0% {
+    text-shadow: 1px 1px 2px #63ec96, 0 0 25px #63ec96, 0 0 5px #63ec96;
+  }
+
+  100% {
+    text-shadow: 1px 1px 2px #d5066a, 0 0 25px #d5066a, 0 0 5px #d5066a;
+  }
+}
+
+@keyframes bells_Color {
+  0.0% {
+    color: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  }
+
+  100% {
+    color: 1px 1px 2px black, 0 0 25px rgb(0, 255, 13), 0 0 5px rgb(0, 109, 27);
+  }
+}
+
+@keyframes waves {
+  0% {
+    text-shadow: 0 0 0px #63ec96, 0 0 0px #36d1dc;
+  }
+
+  50% {
+    text-shadow: 0 0 55px #63ec96, 0 0 55px #36d1dc, 0 0 55px #36d1dc;
+  }
+
+  100% {
+    text-shadow: 0 0 55px #1900ff, 0 0 55px #d400ff;
+  }
+}
+
+/* @keyframes waves {
+  0.0% {
+      background-color: #e2c07100;
+  }
+
+  50.0% {
+      background: linear-gradient(90deg, rgb(81, 0, 156), #36d1dc);
+  }
+
+  100.0% {
+      background: linear-gradient(90deg, rgb(68, 0, 255), #36d1dc);
+  }
+} */
+
+/* @keyframes waves {
+  0.0% {
+      background-color: #e2c171;
+  }
+
+  50.0% {
+      background-color: rgb(81, 0, 156);
+  }
+
+  100.0% {
+      background-color: rgb(68, 0, 255);
+  }
+} */
+
+audio {
+  margin: 40px;
+}
+
+/* .wall {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/18515/PIA09959-1280x800_copy.jpg);
+  background-size: cover;
+} */
+
+.wall {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Trifid_Nebula_by_Deddy_Dayag.jpg/1274px-Trifid_Nebula_by_Deddy_Dayag.jpg);
+  background-size: cover;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+body {
+  background: #000;
+  text-align: center;
+}
+
+body:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.scene {
+  display: inline-block;
+  vertical-align: middle;
+  perspective: 5px;
+  perspective-origin: 50% 50%;
+  position: relative;
+  z-index: -99;
+  top: 30%;
+}
+
+.wrap {
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  left: -500px;
+  top: -500px;
+  transform-style: preserve-3d;
+  animation: move 12s infinite linear;
+  animation-fill-mode: forwards;
+  z-index: -99;
+
+}
+
+.wrap:nth-child(2) {
+  animation: move 12s infinite linear;
+  animation-delay: 6s;
+}
+
+.wall {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  animation: fade 12s infinite linear;
+  animation-delay: 0;
+  z-index: -99;
+}
+
+.wrap:nth-child(2) .wall {
+  animation-delay: 6s;
+}
+
+.wall-right {
+  transform: rotateY(90deg) translateZ(500px);
+}
+
+.wall-left {
+  transform: rotateY(-90deg) translateZ(500px);
+}
+
+.wall-top {
+  transform: rotateX(90deg) translateZ(500px);
+}
+
+.wall-bottom {
+  transform: rotateX(-90deg) translateZ(500px);
+}
+
+.wall-back {
+  transform: rotateX(180deg) translateZ(500px);
+}
+
+@keyframes move {
+  0% {
+    transform: translateZ(-500px) rotate(0deg);
+  }
+
+  100% {
+    transform: translateZ(500px) rotate(0deg);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  2% {
+    opacity: 1;
+  }
+
+  98% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
