@@ -1,7 +1,10 @@
 # Sima Extreme
 
 A modern React Vite version of a goofy for fun static website.
-I only develop this thing near May Day "vappu". Started 2024.
+
+I only develop this thing near May Day "vappu".
+
+Started 2024.
 
 ## Features
 
