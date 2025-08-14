@@ -1,10 +1,12 @@
 # Sima Extreme
 
-A modern React Vite version of a static website.
+A modern React Vite version of a goofy for fun static website.
+I only develop this thing near May Day "vappu". Started 2024.
 
 ## Features
 
-- sadf
+- Calculate optimal sima recipe with absolute banger of an soundtrack
+- Its extremely loud (todo volume slider)
 
 ### Installation
 
